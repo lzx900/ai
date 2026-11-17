@@ -14,7 +14,7 @@ jobs:
       image: espressif/idf:v6.1
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Extract source zip
         shell: bash
@@ -66,7 +66,7 @@ jobs:
           python scripts/build.py waveshare/esp32-s3-rlcd-4.2
 
       - name: Upload firmware
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: xiaozhi-rlcd42-firmware
           path: ${{ env.PROJECT_DIR }}/build/merged-binary.bin
